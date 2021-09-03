@@ -1,0 +1,43 @@
+doctype html
+html
+    head
+        block head
+            meta(charset="UTF-8")
+            meta(name="viewport" content="width=device-width, initial-scale=1.0")
+            link(rel="stylesheet" href="/css/style.css")
+            link(rel="stylesheet" href="/css/bootstrap.css")
+    body.container.mt-5
+        form.border.border-danger.p-2
+            h3.text-center.text-uppercase find nearest city
+            .form-group
+                label.h5(for='latitude') Latitude
+                input#latitude.form-control(type='number' aria-describedby='textHelp' placeholder='latitude')
+            .form-group
+                label.h5(for='longitude') Longitude
+                input#longitude.form-control(type='number' placeholder='longitude')
+            button#submitBtn.mt-2.btn.btn-primary(type='submit') Nearest Country
+
+        #output.text-primary.mt-2.h3
+        hr
+        form.border.border-danger.p-2
+            h3.text-center.text-uppercase list all city
+            .form-group
+                label.h5(for='countryName') Country Name
+                input#countryName.form-control(type='text' placeholder='country Name')
+            button.mt-2#findCountryNameBtn.btn.btn-primary(type='submit') find all city
+
+        #outputListCity.text-primary.h3
+            hr
+        nav.border.border-danger.p-2(aria-label='Page navigation example')
+            h3.text-center.text-uppercase paging list city
+            ul.pagination
+                li.page-item
+                a#previousPage.page-link Previous
+                a#nextPage.page-link Next
+        #listingTable.text-primary.h3
+            hr
+
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer")
+        script(src="/js/bundle.js")
+
+
